@@ -1,0 +1,25 @@
+{
+  "name": "my-party-server",
+  "main": "./src/server.tsx",
+  "compatibility_date": "2025-02-04",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "html_handling": "auto-trailing-slash"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "MyServer",
+        "class_name": "MyServer"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_classes": ["MyServer"]
+    }
+  ]
+}
